@@ -15,12 +15,16 @@
 
 ---
 
-## 🌐 Socials
+## 🌐 Socials  
 
-[![GitHub](https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg)](https://github.com/MatheusBr93)
-[![LinkedIn](https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin-dark.svg)](https://www.linkedin.com/in/matheus-nascimento-60a07228b/)
-
----
+<p align="left">
+  <a href="https://github.com/MatheusBr93" target="_blank">
+    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/github-dark.svg" width="32" height="32" alt="GitHub"/>
+  </a>
+  <a href="https://www.linkedin.com/in/matheus-nascimento-60a07228b/" target="_blank">
+    <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/socials/linkedin-dark.svg" width="32" height="32" alt="LinkedIn"/>
+  </a>
+</p>
 
 ## 🛠️ Skills & Tools  
 
