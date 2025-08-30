@@ -2,15 +2,23 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # atualiza todo dia à 00:00 UTC
-  workflow_dispatch:       # permite rodar manualmente
+    - cron: "0 0 * * *"       # roda todo dia 00:00 UTC
+  workflow_dispatch:           # permite rodar manualmente
   push:
-    branches: ["main"]     # roda quando você fizer push na main
+    branches: ["main", "master"]
+
+permissions:
+  contents: write              # necessário para publicar no branch 'output'
 
 jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
+      # 1) Checkout do repositório (evita erros de git 128)
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2) Gera os SVGs (passando token para evitar rate limit)
       - name: Generate snake SVGs
         uses: Platane/snk@v3
         with:
@@ -18,8 +26,11 @@ jobs:
           outputs: |
             dist/snake.svg
             dist/snake-dark.svg?palette=github-dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Push to output branch
+      # 3) Publica no branch 'output'
+      - name: Publish to output branch
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
