@@ -3,16 +3,6 @@
 <!-- Typing SVG -->
 ![Typing SVG](https://readme-typing-svg.herokuapp.com/?lines=Full+Stack+Developer;React+%7C+Java+%7C+Spring+Boot+%7C+SQL;Node.js+%7C+Python;Sempre+aprendendo!&center=false&vCenter=true&width=600&height=45&pause=1200&size=24&color=22D3EE)
 
-
-
-Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif)  
-My name is **Matheus Rodrigues**
-==========================================================================
-
-### 🚀 Full Stack Developer  
-
-Desenvolvedor Full Stack | React JS | Python | Javascript | SQL | Nodejs | Java | PostgreSQL | Spring
-
 * 🌍  I'm based in **Brazil**  
 * ✉️  You can contact me at **[matheusnascimentobr93@gmail.com](mailto:matheusnascimentobr93@gmail.com)**
 
