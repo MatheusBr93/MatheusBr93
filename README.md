@@ -60,3 +60,6 @@
 <a href="https://github.com/MatheusBr93">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MatheusBr93&langs_count=10&title_color=10b981&text_color=ffffff&icon_color=ffffff&bg_color=1c1917&hide_border=true&locale=en&custom_title=Top%20Languages" alt="Top Languages" />
 </a>
+<!-- Snake animation -->
+![Snake animation - light](https://raw.githubusercontent.com/MatheusBr93/MatheusBr93/output/snake.svg#gh-light-mode-only)
+![Snake animation - dark](https://raw.githubusercontent.com/MatheusBr93/MatheusBr93/output/snake-dark.svg#gh-dark-mode-only)
