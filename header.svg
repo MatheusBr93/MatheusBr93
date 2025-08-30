@@ -1,0 +1,72 @@
+<svg width="1200" height="260" viewBox="0 0 1200 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- gradiente animado -->
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c5cff">
+        <animate attributeName="stop-color" values="#7c5cff; #22d3ee; #7c5cff" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#22d3ee">
+        <animate attributeName="stop-color" values="#22d3ee; #7c5cff; #22d3ee" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- ruído suave -->
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0 0 0 .12 .18 .22 .28 .30 .32"/>
+      </feComponentTransfer>
+    </filter>
+
+    <!-- sombra suave de texto -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- fonte mono-like -->
+    <style>
+      .title { font: 700 38px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Inter, Ubuntu, "Helvetica Neue", Arial, sans-serif; fill: #e5e7eb; }
+      .subtitle { font: 400 18px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; fill: #a3a8b3; }
+      .chip { font: 600 14px/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #0f172a; }
+    </style>
+  </defs>
+
+  <!-- fundo -->
+  <rect width="1200" height="260" fill="#0b0b10"/>
+  <!-- blobs -->
+  <g opacity="0.55">
+    <circle cx="180" cy="100" r="160" fill="url(#g)">
+      <animate attributeName="cx" values="160;200;160" dur="10s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="90;110;90" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="980" cy="180" r="180" fill="url(#g)">
+      <animate attributeName="cx" values="960;1000;960" dur="12s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="170;190;170" dur="12s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- granulado -->
+  <rect width="1200" height="260" filter="url(#grain)" opacity=".35"/>
+
+  <!-- conteúdo -->
+  <g filter="url(#shadow)">
+    <text x="60" y="110" class="title">Matheus Rodrigues</text>
+    <text x="60" y="150" class="subtitle">Full Stack Developer • React • Java • Spring Boot • SQL • Node.js • Python</text>
+
+    <!-- chips -->
+    <g>
+      <rect x="60" y="175" rx="10" ry="10" width="110" height="30" fill="url(#g)"/>
+      <text x="75" y="195" class="chip">React</text>
+
+      <rect x="180" y="175" rx="10" ry="10" width="110" height="30" fill="url(#g)"/>
+      <text x="195" y="195" class="chip">Spring</text>
+
+      <rect x="300" y="175" rx="10" ry="10" width="110" height="30" fill="url(#g)"/>
+      <text x="320" y="195" class="chip">SQL</text>
+
+      <rect x="420" y="175" rx="10" ry="10" width="130" height="30" fill="url(#g)"/>
+      <text x="435" y="195" class="chip">Node.js</text>
+    </g>
+  </g>
+</svg>
